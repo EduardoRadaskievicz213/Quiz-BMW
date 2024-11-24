@@ -8,23 +8,33 @@
 </head>
 <body>
   <header>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg" alt="Logo BMW" class="logo">
-    <h1>Bem-vindo ao Quiz BMW</h1>
+    <div class="logo-container">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg" alt="Logo BMW" class="logo">
+    </div>
+    <h1>Quiz BMW</h1>
+    <p class="subtitle">Descubra o quanto você sabe sobre a BMW</p>
   </header>
-  <main id="quiz-container">
-    <div id="start-screen">
-      <p>Teste seus conhecimentos sobre a BMW!</p>
-      <button id="start-btn">Iniciar Quiz</button>
-    </div>
-    <div id="question-screen" class="hidden">
-      <p id="question-text"></p>
-      <div id="options-container"></div>
-    </div>
-    <div id="result-screen" class="hidden">
-      <p id="result-text"></p>
-      <button id="restart-btn">Reiniciar</button>
+  <main>
+    <div id="quiz-container">
+      <div id="start-screen" class="screen active">
+        <p>Teste seus conhecimentos sobre a BMW!</p>
+        <button class="btn" id="start-btn">Iniciar Quiz</button>
+      </div>
+      <div id="question-screen" class="screen">
+        <div class="question-box">
+          <p id="question-text" class="question-text"></p>
+          <div id="options-container" class="options-container"></div>
+        </div>
+      </div>
+      <div id="result-screen" class="screen">
+        <p id="result-text"></p>
+        <button class="btn" id="restart-btn">Reiniciar</button>
+      </div>
     </div>
   </main>
+  <footer>
+    <p>© 2024 Quiz BMW - Todos os direitos reservados</p>
+  </footer>
   <script src="script.js"></script>
 </body>
-  </html>
+</html>
