@@ -1,45 +1,120 @@
-body {
+/* Variáveis de cores */
+:root {
+  --bmw-blue: #0066b2;
+  --bmw-black: #000000;
+  --bmw-white: #ffffff;
+  --bmw-gray: #f4f4f4;
+  --bmw-hover: #004080;
+}
+
+/* Reset */
+body, h1, p, button {
+  margin: 0;
+  padding: 0;
   font-family: 'Arial', sans-serif;
-  background-color: #000;
-  color: #fff;
-  text-align: center;
+  color: var(--bmw-white);
+}
+
+body {
+  background: linear-gradient(135deg, var(--bmw-black), var(--bmw-blue));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
   margin: 0;
 }
 
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+}
+
 .logo {
-  width: 100px;
-  margin-top: 20px;
+  width: 120px;
 }
 
 h1 {
-  font-size: 2rem;
-  color: #0066b2; /* Azul da BMW */
+  font-size: 2.5rem;
 }
 
-button {
-  background-color: #0066b2;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  border-radius: 5px;
+.subtitle {
+  font-size: 1rem;
+  color: var(--bmw-gray);
 }
 
-button:hover {
-  background-color: #004080;
+/* Quiz Container */
+#quiz-container {
+  background: var(--bmw-black);
+  border: 2px solid var(--bmw-blue);
+  border-radius: 10px;
+  padding: 20px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
-.hidden {
+.screen {
   display: none;
 }
 
-#quiz-container {
-  padding: 20px;
+.screen.active {
+  display: block;
 }
 
-#options-container button {
+.question-box {
+  margin: 20px 0;
+}
+
+.question-text {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Botões */
+.btn {
+  background: var(--bmw-blue);
+  color: var(--bmw-white);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--bmw-hover);
+}
+
+.options-container button {
   display: block;
   margin: 10px auto;
-  width: 80%;
+  padding: 10px;
+  width: 100%;
+  background: var(--bmw-blue);
+  color: var(--bmw-white);
+  border: 2px solid var(--bmw-gray);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.options-container button:hover {
+  background: var(--bmw-hover);
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: var(--bmw-gray);
 }
